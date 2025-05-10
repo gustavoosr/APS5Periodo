@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
+    <title>EcologicAI</title>
+</head>
+
+<body>
+    <div class="title">
+        <t1>Ecologic AI</t1>
+    </div>
+    <div class="body">
+        <h2 class="text-body">Escolha uma das opções:</h2>
+        <div class="buttons">
+            <div class="buttonsContainer">
+                <button class="button" onclick= "redirect()">
+                    <img src="css/icons/person.png" alt="Ícone de robô">
+                </button>
+                <h3 class="titleButton">Chat Bot</h3>
+                <p class="textButton">Inicie uma conversa com um agente de IA <br>
+                     que irá analisar todas as notícias a respeito do meio ambiente.</p>
+            </div>
+            <div class="buttonsContainer">
+                <button class="button" onclick="redirectGraphic()">
+                    <img src="css/icons/bar-graph.png" alt="Ícone de Gráfico">
+                </button>
+                <h3 class="titleButton">Gráfico</h3>
+                <p class="textButton">Analise a quantidade de noticias boas e ruins através <br> de gráficos</p>
+            </div>
+        </div>
+    </div>
+    <div id="menuSide" class="menu">
+        <a href="javascript:void(0)" class="close" onclick="closeMenu()">&times;</a>
+        <a href="javascript:void(0)" onclick="openTrafficMonitor()">Trafêgo de requisições</a>
+    </div>
+    <!-- Pop-up de tráfego de rede -->
+    <div id="trafficPopup" class="hidden popup">
+        <div class="popup-content">
+            <h3>Tráfego de Rede</h3>
+            <table id="trafficTable">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Método</th>
+                        <th>Path</th>
+                        <th>Status</th>
+                        <th>Protocolo</th>
+                        <th>Duração (s)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button onclick="closeTrafficPopup()">Fechar</button>
+        </div>
+    </div>
+    <div id="content">
+        <span style="font-size:25px;cursor:pointer" onclick="openMenu()">&#9776;</span>
+    </div>
+    <footer class="footer">Gustavo Dos Santos R. Silva, Universidade Paulista - UNIP <br> ©Todos os direitos reservados
+    </footer>
+    <script src="javascript/Index.js"></script>
+</body>
+
+</html>

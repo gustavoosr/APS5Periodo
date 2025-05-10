@@ -1,0 +1,252 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FontTitle';
+    src:url('fonts/RyeRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FontTitleButton';
+    src: url('fonts/Rationale-Regular.ttf') format('truetype');
+}
+body{
+    background-color: #050a30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 100vh; /* Faz o body ocupar a tela toda */
+    margin: 0;
+    
+}
+
+.body{
+    width: 70%;
+    height: 85%;
+    border-radius: 8px;
+    margin-top: 20px;
+
+}
+
+.title{
+    color: aliceblue;
+    text-align: center;
+    font-size: 55px;
+    font-family: 'FontTitle', sans-serif;
+    padding: 10px, 20px;
+    border-radius: 8px;
+    
+}
+.footer{
+    width: 100%;
+    color: white; /* Cor do texto */
+    text-align: center;
+    
+}
+
+.text-body{
+    color: aliceblue;
+    font-family: 'FontTitleButton';
+    font-size: 30px;
+    padding-left: auto;
+    padding-top: auto;
+    align-items: center;
+
+}
+
+.buttons{
+
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center;
+    gap: 250px; /* Espaçamento entre os botões */
+    padding-top: auto;
+}
+.buttonsContainer{
+    
+    text-align: center
+}
+
+.button{
+    width: 170px;
+    height: 170px;
+    margin: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; /* Cursor de mão ao passar */
+    border: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.button img{
+    width: 160px;  /* Ajusta o tamanho do ícone */
+    height: 160px;
+    
+}
+.button :hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.button:active {
+    box-shadow: inset 5px 5px 8px rgba(0, 0, 0, 0.4); /* Mais fundo ao clicar */
+    transform: translateY(2px); /* Move um pouco para baixo */
+}
+.titleButton{
+    color: aliceblue;
+    font-family: 'FontTitleButton';
+    font-size: 35px;
+
+}
+.textButton{
+    color: aliceblue;
+    text-align: center;
+}
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#content {
+    transition: margin-right 0.5s;
+    padding: 20px;
+    position: fixed; /* Mantém o botão fixo na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da esquerda */
+    font-size: 15px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    z-index: 1000; 
+}
+
+/* Estilos para o Modal */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparente, para sombrear o fundo */
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out; /* Animação para aparecer */
+    overflow: auto;
+}
+
+/* Estilo para esconder o modal */
+.hidden {
+    display: none;
+}
+
+/* Animação FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos do conteúdo do modal */
+.popup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    font-family: 'FontTitleButton', sans-serif;
+    border: 1px solid #888;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* SlideIn Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos do botão de fechar */
+.close-btn {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Tabela de tráfego */
+#trafficTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#trafficTable, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsividade do Modal */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+    }
+}

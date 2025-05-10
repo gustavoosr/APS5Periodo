@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico - Ecologic IA</title>
+    <link rel="stylesheet" href="css/Grafico.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="title-logo">
+        <img src="css/icons/bar-graph.png" alt="InconeGrafico">
+        <t1 id="t1">Gráfico</t1>
+    </div>
+    <div class="body" id="idBody">
+        <div id="filterContainer">
+            <button onclick="changeFilterDate()">📅 Filtrar por data</button>
+    
+            <div id="filterDate" class="hidden">
+                <label>De: <input type="date" id="dateStart"></label>
+                <label>Até: <input type="date" id="dateEnd"></label>
+                <button onclick="filterInDate()">Aplicar Filtro</button>
+            </div>
+        </div>
+        <div id="panelContainer">
+            <label id="labelGraphic">Gráfico</label>
+            <div id="sectionGraphic"> 
+                <canvas id=graphicTheme></canvas>
+            </div>
+            
+            <div id="sectionTable">
+                <table id="tableClassification">
+                    <thead>
+                        <tr>
+                            <th>Assunto</th>
+                            <th>QTD Boas</th>
+                            <th>QTD Ruins</th>
+                            <th>QTD Irrelevantes</th>
+                            <th>QTD Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">Gustavo Dos Santos R. Silva, Universidade Paulista - UNIP <br> ©Todos os direitos reservados
+    </footer>
+    <script src="javascript/Grafico.js"></script>
+</body>
+
+</html>

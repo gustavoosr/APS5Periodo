@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'FontTitle';
+    src: url('fonts/Rationale-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FontTextArea';
+    src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+html, body {
+    min-width: 360px; /* impede que a largura da janela fique menor que isso */
+    min-height: 360px ;
+  }
+
+body {
+    background-color: #050a30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centraliza na horizontal */
+    align-items: center;
+    /* Centraliza na vertical */
+    height: 100vh;
+    /* Faz o body ocupar a tela toda */
+    margin: 0;
+    gap: 25px;
+}
+
+.title-logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: aliceblue;
+    font-size: 18px;
+    font-family: 'FontTitle', sans-serif;
+    width: 10%;
+    height: 10%;
+}
+
+.title-logo img {
+    width: 65px;
+    height: 65px;
+}
+
+.title-logo #t1 {
+    padding-left: 15px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 85px;
+    background-color: aliceblue;
+    width: 70%;
+    height: auto;
+    min-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    gap: 16px;
+    padding: 24px
+
+}
+
+.messagePanel {
+    width: 90%;
+    height: 85%;
+    background-color: ghostwhite;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border: 1px solid #ccc;  
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    word-wrap: break-word;
+}
+.user {
+    align-self: flex-end;
+    background-color: #10a37f;
+    color: white;
+    border-radius: 16px 16px 0 16px;
+
+}
+
+.response{
+    align-self: flex-start;
+    background-color: #e6e6e6;
+    color: #333;
+    border-radius: 16px 16px 16px 0;    
+}
+
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 90%;
+    height: auto;
+    background-color: aliceblue
+}
+
+textarea {
+    width: 100%;
+    line-height: 1.5;
+    min-height: 48px;
+    max-height: 160px;
+    resize: none;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'FontTextArea', sans-serif;
+}
+
+.elements #button {
+    align-self: flex-end;
+    padding: 10px 16px;
+    font-size: 10px;
+    background-color: aliceblue;
+    color: white;
+    border: none;
+    border-radius: 170px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.elements #button :hover {
+    background-color: #ccc;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.elements #button :active{
+    box-shadow: inset 5px 5px 8px rgba(0, 0, 0, 0.4); /* Mais fundo ao clicar */
+    transform: translateY(2px); /* Move um pouco para baixo */
+}
+
+
+.elements #button img {
+    width: 26px;
+    height: 26px;
+}
+.footer{
+    font-size: 8px;
+    width: 100%;
+    color: white; /* Cor do texto */
+    text-align: center;
+    
+}
